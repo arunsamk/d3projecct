@@ -7,11 +7,9 @@ d3.json('menu.json').then(data => {
         .domain([0, 1000])
         .range([0, 500]);
     
-    const x = d3.scaleBand()
-        .domain(data.map(item => item.name))
-        .range([0, 500]);
-        
-    console.log(data.map(item => item.name));        
+    console.log(y(400));
+    console.log(y(0));
+    console.log(y(900));
     // join the data to the rects
     const rects = svg.selectAll('rect')
         .data(data);
