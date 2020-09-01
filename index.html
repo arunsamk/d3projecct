@@ -6,11 +6,34 @@
     <title>D3=>Bar Chart</title>
 </head>
 <body>
-    <div class="canvas">
-        <svg width="600" height="600">
-        <rect></rect>
-        </svg>
+    <div class="canvas">        
     </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBnG87mvG9IUvwBCpqiV7fath8NdCA8U1g",
+    authDomain: "d3sample-43dae.firebaseapp.com",
+    databaseURL: "https://d3sample-43dae.firebaseio.com",
+    projectId: "d3sample-43dae",
+    storageBucket: "d3sample-43dae.appspot.com",
+    messagingSenderId: "81521956041",
+    appId: "1:81521956041:web:1605e3f7fd1c26b6896918",
+    measurementId: "G-RK20GS6SZY"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);  
+  firebase.analytics();  
+  const db = firebase.firestore();
+//   db.settings({ timestampsInSnapshots: true });
+</script>
     <script src="https://d3js.org/d3.v5.js"></script>
     <script src="index.js"></script>
 </body>
